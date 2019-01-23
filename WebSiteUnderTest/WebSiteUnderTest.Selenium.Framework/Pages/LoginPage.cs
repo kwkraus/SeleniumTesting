@@ -7,7 +7,7 @@ namespace WebSiteUnderTest.Selenium.Framework.Pages
     {
         public static void GoTo()
         {
-            Driver.Instance.Navigate().GoToUrl($"{Driver.BaseUrl}/account/login");
+            Driver.Instance.Navigate().GoToUrl($"{Driver.BaseUrl}/Identity/Account/Login");
 
         }
 
@@ -44,14 +44,14 @@ namespace WebSiteUnderTest.Selenium.Framework.Pages
 
             public void Login()
             {
-                var loginElement = Driver.Instance.FindElement(By.Id("Email"));  //.SendKeys(userdata.userid);
+                var loginElement = Driver.Instance.FindElement(By.Id("Input_Email"));  //.SendKeys(userdata.userid);
 
                 loginElement.Clear();
                 loginElement.SendKeys(userdata.userid);
 
-                Driver.Instance.FindElement(By.Id("Password")).SendKeys(userdata.password);
+                Driver.Instance.FindElement(By.Id("Input_Password")).SendKeys(userdata.password);
                 if (userdata.rememberMe)
-                    Driver.Instance.FindElement(By.Id("RememberMe")).Click();
+                    Driver.Instance.FindElement(By.Id("Input_RememberMe")).Click();
 
                 Driver.Instance.FindElement(By.CssSelector("button.btn.btn-default")).Click();
             }

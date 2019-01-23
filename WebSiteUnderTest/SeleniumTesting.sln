@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSiteUnderTest", "WebSiteUnderTest\WebSiteUnderTest.csproj", "{443272C6-7D2E-4489-8B59-1BFFCC6A586E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteUnderTest.Selenium.MSTest.Tests", "WebSiteUnderTest.Selenium.Tests\WebSiteUnderTest.Selenium.MSTest.Tests.csproj", "{4AC5E97B-D5E3-450F-ACFF-9E96BBC72838}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteUnderTest.Selenium.Framework", "WebSiteUnderTest.Selenium.Framework\WebSiteUnderTest.Selenium.Framework.csproj", "{43938797-32F1-4B03-B24E-190B77F72EC3}"
@@ -20,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteUnderTest.Selenium.XUnit.Tests", "WebSiteUnderTest.Selenium.XUnitTest.Tests\WebSiteUnderTest.Selenium.XUnit.Tests.csproj", "{AED11B5F-C614-40D6-A215-3380AF6C43EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteUnderTest.MVC", "WebSiteUnderTest.MVC\WebSiteUnderTest.MVC.csproj", "{833D9F62-B90E-4D96-921E-8E8D533F9165}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSiteUnderTest.MVC", "WebSiteUnderTest.MVC\WebSiteUnderTest.MVC.csproj", "{833D9F62-B90E-4D96-921E-8E8D533F9165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +26,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{443272C6-7D2E-4489-8B59-1BFFCC6A586E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{443272C6-7D2E-4489-8B59-1BFFCC6A586E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{443272C6-7D2E-4489-8B59-1BFFCC6A586E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{443272C6-7D2E-4489-8B59-1BFFCC6A586E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4AC5E97B-D5E3-450F-ACFF-9E96BBC72838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4AC5E97B-D5E3-450F-ACFF-9E96BBC72838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AC5E97B-D5E3-450F-ACFF-9E96BBC72838}.Release|Any CPU.ActiveCfg = Release|Any CPU

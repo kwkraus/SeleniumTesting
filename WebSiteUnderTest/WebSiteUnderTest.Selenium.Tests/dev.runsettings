@@ -44,7 +44,7 @@
 
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="BaseUrl" value="http://localhost:2889" />
+    <Parameter name="BaseUrl" value="https://localhost:5001" />
     <Parameter name="TargetBrowser" value="Chrome" />
   </TestRunParameters>
 

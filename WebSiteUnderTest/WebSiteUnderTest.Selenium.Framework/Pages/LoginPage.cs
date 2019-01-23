@@ -53,7 +53,8 @@ namespace WebSiteUnderTest.Selenium.Framework.Pages
                 if (userdata.rememberMe)
                     Driver.Instance.FindElement(By.Id("Input_RememberMe")).Click();
 
-                Driver.Instance.FindElement(By.CssSelector("button.btn.btn-default")).Click();
+                loginElement.Submit();
+                //Driver.Instance.FindElement(By.CssSelector("button.btn.btn-default")).Click();
             }
         }
     }

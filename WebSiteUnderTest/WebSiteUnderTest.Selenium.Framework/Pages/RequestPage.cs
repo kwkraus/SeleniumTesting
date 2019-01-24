@@ -67,9 +67,8 @@ namespace WebSiteUnderTest.Selenium.Framework.Pages
                         SelectElement select = new SelectElement(Driver.Instance.FindElement(By.Id("Level")));
 
                         select.SelectByText(_request.Level);
-
                         new WebDriverWait(Driver.Instance, new TimeSpan(0, 0, 5))
-                            .Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("input.btn.btn-default"))).Click();
+                            .Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector("input.btn.btn-default"))).Click();
 
                         // Return or break.
                         break;

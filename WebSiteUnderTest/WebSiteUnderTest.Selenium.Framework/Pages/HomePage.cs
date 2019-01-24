@@ -20,14 +20,6 @@ namespace WebSiteUnderTest.Selenium.Framework.Pages
             }
         }
 
-        public static void ClickTriggerAlert()
-        {
-            Driver.Instance.FindElement(By.Id("alert")).Click();
-            IAlert alert = Driver.Instance.SwitchTo().Alert();
-            Thread.Sleep(1500);
-            alert.Accept();
-        }
-
         public static void ClickAlertFromExecuteJS()
         {
             ((IJavaScriptExecutor)Driver.Instance).ExecuteScript(

@@ -28,14 +28,6 @@ namespace WebSiteUnderTest.Selenium.MSTest.Tests.Home
         }
 
         [TestMethod]
-        public void Home_Click_Trigger_Alert()
-        {
-            HomePage.GoTo();
-            HomePage.ClickTriggerAlert();
-            Assert.IsTrue(HomePage.IsAt, "Could not access homepage after alert click");
-        }
-
-        [TestMethod]
         public void Home_Click_Alert_From_ExecuteScript()
         {
             HomePage.GoTo();

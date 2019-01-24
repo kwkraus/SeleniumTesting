@@ -27,7 +27,8 @@ namespace WebSiteUnderTest.Selenium.Framework
                     //chrome
                     ChromeDriverService svc = ChromeDriverService.CreateDefaultService();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.AddArguments("--incognito");
+                    chromeOptions.AddArgument("incognito");
+                    //chromeOptions.AddArgument("headless");
                     Instance = new ChromeDriver(svc, chromeOptions);
                     break;
 

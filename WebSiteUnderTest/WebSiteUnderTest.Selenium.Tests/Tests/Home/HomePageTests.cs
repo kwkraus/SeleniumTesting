@@ -22,7 +22,7 @@ namespace WebSiteUnderTest.Selenium.MSTest.Tests.Home
         {
             HomePage.GoTo();
             HomePage.ClickCarousel(3);
-            Thread.Sleep(1500);
+            //Thread.Sleep(1500);  //just for demo purposes
             Assert.IsTrue(HomePage.IsAt, "Could not access homepage after click of carousel");
         }
 

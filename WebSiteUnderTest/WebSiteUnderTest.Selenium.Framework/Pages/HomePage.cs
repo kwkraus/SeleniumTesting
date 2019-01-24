@@ -41,8 +41,6 @@ namespace WebSiteUnderTest.Selenium.Framework.Pages
 
         public static void ClickCarousel(int clicks = 1)
         {
-            Helper.TakeScreenShot(Driver.Instance, $"{nameof(HomePage)}-{nameof(IsAt)}");
-
             for (int x = 0; x < clicks; x++)
             {
                 Driver.Instance.FindElement(By.ClassName("glyphicon-chevron-right")).Click();

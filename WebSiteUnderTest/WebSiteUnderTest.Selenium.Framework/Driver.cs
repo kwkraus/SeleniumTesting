@@ -12,14 +12,19 @@ namespace WebSiteUnderTest.Selenium.Framework
 
         public static string BaseUrl { get; set; }
 
-        public static void Initialize(string driverType)
+        public static void Initialize(
+            string driverType,
+            bool isPrivateMode = true,
+            bool isHeadless = false)
         {
             switch (driverType)
             {
                 case "IE":
                     InternetExplorerDriverService service = InternetExplorerDriverService.CreateDefaultService();
-                    InternetExplorerOptions options = new InternetExplorerOptions();
-                    options.IgnoreZoomLevel = true;
+                    InternetExplorerOptions options = new InternetExplorerOptions
+                    {
+                        IgnoreZoomLevel = true
+                    };
                     Instance = new InternetExplorerDriver(service, options);
                     break;
 
@@ -27,14 +32,30 @@ namespace WebSiteUnderTest.Selenium.Framework
                     //chrome
                     ChromeDriverService svc = ChromeDriverService.CreateDefaultService();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.AddArgument("incognito");
-                    //chromeOptions.AddArgument("headless");
+                    if(isPrivateMode)
+                        chromeOptions.AddArgument("incognito");
+
+                    if(isHeadless)
+                        chromeOptions.AddArgument("headless");
+
                     Instance = new ChromeDriver(svc, chromeOptions);
                     break;
 
                 case "Firefox":
                     //firefox
-                    Instance = new FirefoxDriver();
+                    FirefoxDriverService geckoSvc = FirefoxDriverService.CreateDefaultService();
+                    var geckoOptions = new FirefoxOptions
+                    {
+                        AcceptInsecureCertificates = true
+                    };
+
+                    if (isPrivateMode)
+                        geckoOptions.AddArgument("-private");
+
+                    if(isHeadless)
+                        geckoOptions.AddArgument("-headless");
+
+                    Instance = new FirefoxDriver(geckoSvc, geckoOptions);
                     break;
 
                 //case "Phantom":
@@ -48,7 +69,7 @@ namespace WebSiteUnderTest.Selenium.Framework
             }
 
             Instance.Manage().Window.Maximize();
-            Instance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            Instance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public static void Quit()

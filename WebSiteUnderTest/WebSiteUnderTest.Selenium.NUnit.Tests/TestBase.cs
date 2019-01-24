@@ -9,7 +9,10 @@ namespace WebSiteUnderTest.Selenium.NUnit.Tests
         [SetUp]
         public void SetUp()
         {
-            Driver.Initialize(ConfigurationSettings.AppSettings["TargetBrowser"].ToString());
+            Driver.Initialize(
+                ConfigurationSettings.AppSettings["TargetBrowser"].ToString(),
+                bool.Parse(ConfigurationSettings.AppSettings["isPrivateMode"].ToString()),
+                bool.Parse(ConfigurationSettings.AppSettings["isHeadless"].ToString()));
             Driver.BaseUrl = ConfigurationSettings.AppSettings["BaseUrl"].ToString();
         }
 

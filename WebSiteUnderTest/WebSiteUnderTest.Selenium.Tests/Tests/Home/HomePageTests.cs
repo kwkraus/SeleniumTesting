@@ -20,7 +20,6 @@ namespace WebSiteUnderTest.Selenium.MSTest.Tests.Home
         //[DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\data.csv", "data#csv", DataAccessMethod.Sequential)]
         public void Home_Test_Carousel_Click()
         {
-            //System.Diagnostics.Debug.WriteLine($"username is {TestContext.DataRow[0].ToString()}");
             HomePage.GoTo();
             HomePage.ClickCarousel(3);
             Thread.Sleep(1500);

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Drawing.Imaging;
 using System.Threading;
 
 namespace WebSiteUnderTest.Selenium.Framework.Pages
@@ -16,7 +17,15 @@ namespace WebSiteUnderTest.Selenium.Framework.Pages
             {
                 var requestBtns = Driver.Instance.FindElements(By.Id("myCarousel"));
 
-                return (requestBtns.Count > 0);
+                if(requestBtns.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    Helper.TakeScreenShot(Driver.Instance, $"{nameof(HomePage)}-{nameof(IsAt)}");
+                    return false;
+                }
             }
         }
 

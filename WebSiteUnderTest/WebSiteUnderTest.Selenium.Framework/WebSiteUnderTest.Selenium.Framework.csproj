@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper.cs" />
     <Compile Include="Pages\Classes\RequestData.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="Pages\HomePage.cs" />

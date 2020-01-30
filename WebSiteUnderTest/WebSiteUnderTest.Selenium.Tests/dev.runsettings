@@ -47,7 +47,7 @@
     <Parameter name="BaseUrl" value="https://localhost:5001" />
     <Parameter name="TargetBrowser" value="Chrome" />
     <Parameter name="isPrivateMode" value="true" />
-    <Parameter name="isHeadless" value="true" />
+    <Parameter name="isHeadless" value="false" />
   </TestRunParameters>
 
   <!-- Adapter Specific sections -->
